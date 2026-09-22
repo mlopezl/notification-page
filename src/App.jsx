@@ -1,9 +1,11 @@
+import NotificationContainer from "./components/notifications/NotificationContainer"
+
 function App() {
 
   return (
-    <>
-      <h1 className="bg-red-500">Hola Mundo</h1>
-    </>
+    <div className="bg-Navy-50 w-full min-h-screen flex justify-center align-center">
+      <NotificationContainer/>
+    </div>
   )
 }
 
