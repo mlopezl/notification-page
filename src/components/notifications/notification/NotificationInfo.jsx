@@ -1,13 +1,23 @@
+import NewNotificationIcon from "./NewNotificationIcon";
+import Picture from "./Picture";
+
 const messages = {
     "reaction": "reacted to your recent post",
-    "follow": "followed you"
+    "follow": "followed you",
+    "joined": "has joined your group",
+    "left": "left the group",
+    "message": "send you a private message",
+    "commented": "commented on your picture"
 }
 
-function NotificationInfo({name, post, type, isNew}){
+function NotificationInfo({name, post, type, isNew, group, picture}){
     return(
-         <p><span className="text-Navy-950 font-bold">{name}</span> {messages[type]}  <span className="font-bold">{post}</span>
-         { isNew ? <span className="inline-block ml-1 w-2 h-2 rounded-full bg-Red-500"></span> : null }
+        <div className="flex justify-between">
+            <p><span className="text-Navy-950 font-bold">{name}</span> {messages[type]}  <span className="font-bold">{post}</span> <span className="text-Blue-950 font-semibold">{group}</span>
+         { isNew ? <NewNotificationIcon/> : null }
          </p>
+         { picture ? <Picture picture={picture}/> : null}
+        </div>      
     )
 }
 

@@ -1,7 +1,7 @@
 function NotificationAvatar({avatar}) {
   return (
-    <div className="w-10 h-10">
-      <img className="w-10 h-10" src={avatar} alt="Avatar" />
+    <div className="w-8 h-8">
+      <img className="w-8 h-8" src={avatar} alt="Avatar" />
     </div>
   );
 }
