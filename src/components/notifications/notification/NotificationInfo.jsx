@@ -13,7 +13,7 @@ const messages = {
 function NotificationInfo({name, post, type, isNew, group, picture}){
     return(
         <div className="flex justify-between">
-            <p><span className="text-Navy-950 font-bold">{name}</span> {messages[type]}  <span className="font-bold">{post}</span> <span className="text-Blue-950 font-semibold">{group}</span>
+            <p><span className="text-Navy-950 font-bold">{name}</span> {messages[type]}  <span className="font-bold transition duration-300 hover:text-Blue-950 hover:cursor-pointer">{post}</span> <span className="text-Blue-950 font-semibold transition duration-300 hover:cursor-pointer">{group}</span>
          { isNew ? <NewNotificationIcon/> : null }
          </p>
          { picture ? <Picture picture={picture}/> : null}
