@@ -7,7 +7,7 @@ function NotificationList() {
       {notifications.map((notification) => (
         <Notification
           key={notification.id}
-          avatar={notification.avatar}
+          avatar={import.meta.env.BASE_URL + notification.avatar.replace(/^\//, "")}
           isNew={notification.isNew}
           type={notification.type}
           name={notification.name}
@@ -15,7 +15,7 @@ function NotificationList() {
           group={notification.group}
           time={notification.time}
           message={notification.message}
-          picture={notification.picture}
+          picture={notification.picture ? import.meta.env.BASE_URL + notification.picture.replace(/^\//, "") : undefined}
         />
       ))}
     </section>
